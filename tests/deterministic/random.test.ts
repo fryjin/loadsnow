@@ -4,6 +4,18 @@ import { SeededRandom } from '../../packages/design-random/src/index';
 const sequence = (random: SeededRandom) => Array.from({ length: 32 }, () => random.nextFloat());
 
 describe('SeededRandom', () => {
+  it('preserves the M0 v1 seed and fork golden vectors', () => {
+    const random = new SeededRandom('839217');
+    expect(Array.from({ length: 8 }, () => random.nextFloat())).toEqual([
+      0.6031295040156692, 0.6602685016114265, 0.7183528391178697, 0.2583344711456448,
+      0.5731411734595895, 0.0892491105478257, 0.7108738378155977, 0.9557754513807595,
+    ]);
+    expect(Array.from({ length: 8 }, () => random.nextInt(1, 100))).toEqual([15, 38, 5, 7, 67, 38, 62, 27]);
+    const layout = random.fork('layout');
+    expect(Array.from({ length: 4 }, () => layout.nextFloat())).toEqual([
+      0.15718467580154538, 0.7643427399452776, 0.20420550578273833, 0.54142124671489,
+    ]);
+  });
   it('repeats the same mixed sequence in 100 independent runs', () => {
     const run = () => {
       const random = new SeededRandom(839217);

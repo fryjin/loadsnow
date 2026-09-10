@@ -26,23 +26,25 @@ TypeScript, pnpm workspace, Vite, React in apps only, and Vitest are required.
 
 ## Implementation and verification
 
-- [ ] Scaffold package manifests, compiler configs and domain models.
+- [x] Scaffold package manifests, compiler configs and domain models.
   Files: package.json, pnpm-workspace.yaml, tsconfig*.json, packages/*/src/index.ts.
   Check: pnpm install; pnpm typecheck with separate Core compiler.
-- [ ] Random TDD: tests/deterministic/random.test.ts then design-random/src/index.ts.
+- [x] Random TDD: tests/deterministic/random.test.ts then design-random/src/index.ts.
   Check 100 repeated sequences, seed divergence, inclusive bounds, namespace stability,
   nested fork boundaries, weights and invalid input.
-- [ ] Rules TDD: tests/rules.test.ts then design-rules/src/index.ts.
+- [x] Rules TDD: tests/rules.test.ts then design-rules/src/index.ts.
   Check all 8 operators and all 3 effects, no mutation, absent fields fail closed.
-- [ ] Card TDD: tests/cards.test.ts then card-library/src/index.ts and data/cards/*.json.
+- [x] Card TDD: tests/cards.test.ts then card-library/src/index.ts and data/cards/*.json.
   Check 7 cards (3/2/2), schema diagnostics, duplicates, L003 without/with image,
   L002 high density x0.3, and data-only eligibility change under a different card id.
-- [ ] Build app/src/main.tsx and run-lab.ts with basic form/results.
+- [x] Build app/src/main.tsx and run-lab.ts with basic form/results.
   Check reproducible output after RUN/reload; toggles; counts; diagnostics.
-- [ ] Add tests/architecture.test.ts to reject random leakage, platform imports,
+- [x] Add tests/architecture.test.ts to reject random leakage, platform imports,
   browser globals, hardcoded card IDs and invalid package dependency directions.
-- [ ] Add README and .github/workflows/ci.yml.
+- [x] Add README and .github/workflows/ci.yml.
   Check pnpm install --frozen-lockfile, pnpm typecheck, pnpm test, pnpm build.
-- [ ] Independent code review, browser verification, commit/PR and CI observation.
+- [x] Independent code review and browser verification.
   Deliver tree, exact test/build outcomes, known issues and architecture review notes.
 
+
+GitHub publication and current CI status are reported in the PR and final handoff.
