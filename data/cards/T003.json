@@ -1,0 +1,23 @@
+{
+  "id": "T003",
+  "type": "typography",
+  "name": "Condensed Impact",
+  "version": "0.1.0",
+  "status": "active",
+  "riskLevel": "low",
+  "rarity": "common",
+  "weight": 1,
+  "parameters": {
+    "fontFamily": {
+      "type": "string",
+      "default": "Impact, sans-serif"
+    },
+    "fontWeight": {
+      "type": "number",
+      "default": 700,
+      "min": 100,
+      "max": 900
+    }
+  },
+  "rules": []
+}

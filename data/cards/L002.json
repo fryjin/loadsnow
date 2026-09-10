@@ -1,0 +1,36 @@
+{
+  "id": "L002",
+  "type": "layout",
+  "name": "Centered Statement",
+  "version": "0.1.0",
+  "status": "active",
+  "riskLevel": "low",
+  "rarity": "common",
+  "weight": 1,
+  "parameters": {
+    "alignment": {
+      "type": "string",
+      "default": "center"
+    },
+    "columns": {
+      "type": "number",
+      "default": 1,
+      "min": 1,
+      "max": 1
+    }
+  },
+  "rules": [
+    {
+      "id": "high-density-weight",
+      "when": {
+        "field": "contentDensity",
+        "operator": "eq",
+        "value": "high"
+      },
+      "effect": {
+        "type": "weightMultiply",
+        "factor": 0.3
+      }
+    }
+  ]
+}

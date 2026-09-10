@@ -1,0 +1,36 @@
+{
+  "id": "L003",
+  "type": "layout",
+  "name": "Split Editorial",
+  "version": "0.1.0",
+  "status": "active",
+  "riskLevel": "low",
+  "rarity": "common",
+  "weight": 1,
+  "parameters": {
+    "alignment": {
+      "type": "string",
+      "default": "left"
+    },
+    "columns": {
+      "type": "number",
+      "default": 2,
+      "min": 2,
+      "max": 2
+    }
+  },
+  "rules": [],
+  "eligibility": [
+    {
+      "id": "requires-image",
+      "when": {
+        "field": "hasImage",
+        "operator": "eq",
+        "value": false
+      },
+      "effect": {
+        "type": "disable"
+      }
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "name": "@loadsnow/design-rules",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "@loadsnow/design-domain": "workspace:*"
+  }
+}
+

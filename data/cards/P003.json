@@ -1,0 +1,25 @@
+{
+  "id": "P003",
+  "type": "palette",
+  "name": "Cream / Red / Black",
+  "version": "0.1.0",
+  "status": "active",
+  "riskLevel": "low",
+  "rarity": "common",
+  "weight": 1,
+  "parameters": {
+    "background": {
+      "type": "string",
+      "default": "#F5EBDD"
+    },
+    "foreground": {
+      "type": "string",
+      "default": "#171717"
+    },
+    "accent": {
+      "type": "string",
+      "default": "#D52B2B"
+    }
+  },
+  "rules": []
+}
