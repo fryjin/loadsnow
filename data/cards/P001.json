@@ -1,0 +1,21 @@
+{
+  "id": "P001",
+  "type": "palette",
+  "name": "Black / White",
+  "version": "0.1.0",
+  "status": "active",
+  "riskLevel": "low",
+  "rarity": "common",
+  "weight": 1,
+  "parameters": {
+    "background": {
+      "type": "string",
+      "default": "#FFFFFF"
+    },
+    "foreground": {
+      "type": "string",
+      "default": "#000000"
+    }
+  },
+  "rules": []
+}

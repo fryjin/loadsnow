@@ -1,0 +1,13 @@
+{
+  "name": "@loadsnow/renderer-svg",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "@loadsnow/design-render-model": "workspace:*"
+  }
+}
+
