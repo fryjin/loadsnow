@@ -14,6 +14,10 @@ fieldset { padding: 8px 12px 12px; border: 1px solid #bbb; }
 label { display: grid; gap: 4px; }
 input, select, button { font: inherit; padding: 7px 10px; }
 button { cursor: pointer; }
+small { flex-basis: 100%; }
+.wide { grid-column: 1 / -1; }
+summary { cursor: pointer; font-weight: 600; padding: 8px 0; }
+[role="alert"] { border: 1px solid #a31c1c; padding: 12px; color: #8d1515; }
 :focus-visible { outline: 3px solid #2457b3; outline-offset: 2px; }
 .results { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 section { min-width: 0; background: white; border: 1px solid #ccc; padding: 16px; }

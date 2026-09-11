@@ -1,30 +1,45 @@
 import { describe, expect, it } from 'vitest';
-import { runLab } from '../apps/engine-lab/src/run-lab';
+import { DEFAULT_LAB_INPUTS, nextSeed, runLab } from '../apps/engine-lab/src/run-lab';
 
-describe('Engine Lab integration', () => {
-  it('repeats the same seeded output across fresh runs', () => {
-    const context = { hasImage: false, contentDensity: 'high' } as const;
-    const result = runLab('839217', context);
-    expect(result).toEqual(runLab('839217', context));
-    expect(result.deterministic).toBe(true);
-    expect(result.random.floats).toHaveLength(8);
-    expect(result.random).not.toEqual(runLab('different', context).random);
-    expect(result.counts).toMatchObject({ total: 7, layout: 3, typography: 2, palette: 2 });
-    expect(result.diagnostics).toEqual([]);
+describe('DNA Lab integration', () => {
+  it('loads 27 cards and repeats complete DNA across fresh runs', () => {
+    const output = runLab(DEFAULT_LAB_INPUTS);
+    expect(output.cards).toHaveLength(27);
+    expect(output).toEqual(runLab(DEFAULT_LAB_INPUTS));
+    expect(output.result.status).toBe('success');
+    if (output.result.status !== 'success') throw new Error('Expected DNA');
+    expect(output.result.dna.cards.layout.version).toBe('0.1.0');
+    expect(Array.isArray(output.result.dna.cards.details)).toBe(true);
+    expect(output.result.debug?.pools).toHaveLength(7);
+    const next = runLab({ ...DEFAULT_LAB_INPUTS, seed: nextSeed(DEFAULT_LAB_INPUTS.seed) });
+    expect(next.result.status).toBe('success');
+    expect(next.result).not.toEqual(output.result);
   });
-  it('updates card outcomes from content controls without affecting seeded random output', () => {
-    const withoutImage = runLab('839217', { hasImage: false, contentDensity: 'high' });
-    const withImage = runLab('839217', { hasImage: true, contentDensity: 'low' });
-    expect(withoutImage.rules.find(card => card.id === 'L003')?.disabled).toBe(true);
-    expect(withImage.rules.find(card => card.id === 'L003')?.disabled).toBe(false);
-    expect(withoutImage.rules.find(card => card.id === 'L002')?.weight).toBe(0.3);
-    expect(withImage.rules.find(card => card.id === 'L002')?.weight).toBe(1);
-    expect(withoutImage.random).toEqual(withImage.random);
+  it('honors force controls and reports an ineligible split without an image', () => {
+    const inputs = { ...DEFAULT_LAB_INPUTS, forceLayout: 'L003', forceTypography: 'T001', forcePalette: 'P003' };
+    const output = runLab(inputs);
+    expect(output.result.status).toBe('success');
+    if (output.result.status !== 'success') throw new Error('Expected DNA');
+    expect(output.result.dna.cards).toMatchObject({ layout: { id: 'L003' }, typography: { id: 'T001' }, palette: { id: 'P003' } });
+    expect(runLab({ ...inputs, hasImage: false }).result).toMatchObject({ status: 'error', error: { code: 'FORCED_CARD_INELIGIBLE' } });
   });
-  it('surfaces invalid data diagnostics instead of including the bad card', () => {
-    const result = runLab('839217', { hasImage: true, contentDensity: 'low' }, [{ id: 'BROKEN' }]);
-    expect(result.counts.total).toBe(0);
-    expect(result.diagnostics[0]?.code).toBe('INVALID_CARD_SCHEMA');
-    expect(result.rules).toEqual([]);
+  it('computes profiles from density presets, CJK content and image controls', () => {
+    for (const contentDensity of ['low', 'medium', 'high'] as const) {
+      expect(runLab({ ...DEFAULT_LAB_INPUTS, contentDensity }).profile?.contentDensity).toBe(contentDensity);
+    }
+    expect(runLab({ ...DEFAULT_LAB_INPUTS, caseId: 'case-cjk' }).profile?.language).toBe('ja');
+    const output = runLab({ ...DEFAULT_LAB_INPUTS, hasImage: false });
+    expect(output.profile?.hasImage).toBe(false);
+    expect(output.result).toMatchObject({ status: 'success', dna: { cards: { image: null } } });
+  });
+  it('surfaces invalid library and missing content diagnostics', () => {
+    const output = runLab(DEFAULT_LAB_INPUTS, { packs: [{ id: 'bad' }] });
+    expect(output.cards).toEqual([]);
+    expect(output.result.diagnostics[0]?.code).toBe('INVALID_CARD_SCHEMA');
+    expect(runLab({ ...DEFAULT_LAB_INPUTS, caseId: 'missing' }).result).toMatchObject({ status: 'error', error: { code: 'INVALID_REQUEST' } });
+  });
+  it('advances seeds without a random or clock source', () => {
+    expect(nextSeed('839217')).toBe('839218');
+    expect(nextSeed('custom')).toBe('custom:next');
   });
 });
