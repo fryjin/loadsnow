@@ -1,0 +1,10 @@
+{
+  "id": "D002", "type": "detail", "name": "Index Number", "version": "0.1.0",
+  "status": "active", "riskLevel": "low", "rarity": "common", "weight": 0.8,
+  "tags": ["index", "editorial", "systematic"],
+  "parameters": {
+    "showIndex": { "type": "boolean", "default": true, "probability": 0.85 },
+    "digitCount": { "type": "integer", "min": 2, "max": 3, "default": 2, "distribution": "uniform" }
+  },
+  "eligibility": [], "rules": []
+}

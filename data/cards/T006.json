@@ -1,0 +1,11 @@
+{
+  "id": "T006", "type": "typography", "name": "Serif × Sans", "version": "0.1.0",
+  "status": "active", "riskLevel": "low", "rarity": "uncommon", "weight": 0.8,
+  "tags": ["editorial", "paired", "contrast"],
+  "parameters": {
+    "titleFamilyClass": { "type": "enum", "values": ["serif"], "default": "serif" },
+    "bodyFamilyClass": { "type": "enum", "values": ["sans"], "default": "sans" },
+    "invertPairing": { "type": "boolean", "default": false, "probability": 0.15 }
+  },
+  "eligibility": [], "rules": []
+}

@@ -1,0 +1,10 @@
+{
+  "id": "W001", "type": "wild", "name": "Edge Overflow", "version": "0.1.0",
+  "status": "active", "riskLevel": "high", "rarity": "rare", "weight": 0.35,
+  "tags": ["dynamic", "edge", "overflow"],
+  "parameters": {
+    "allowOverflow": { "type": "boolean", "default": true, "probability": 0.7 },
+    "overflowScale": { "type": "float", "min": 1.05, "max": 1.2, "default": 1.1, "distribution": "uniform" }
+  },
+  "eligibility": [], "rules": []
+}

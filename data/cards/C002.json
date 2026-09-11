@@ -1,0 +1,10 @@
+{
+  "id": "C002", "type": "composition", "name": "Left Gravity", "version": "0.1.0",
+  "status": "active", "riskLevel": "low", "rarity": "common", "weight": 0.9,
+  "tags": ["left-aligned", "editorial", "grounded"],
+  "parameters": {
+    "gravity": { "type": "enum", "values": ["left"], "default": "left" },
+    "emphasisBias": { "type": "float", "min": 0.6, "max": 0.8, "default": 0.7, "distribution": "uniform" }
+  },
+  "eligibility": [], "rules": []
+}

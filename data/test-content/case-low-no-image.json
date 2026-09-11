@@ -1,0 +1,7 @@
+{
+  "id": "case-low-no-image",
+  "language": "en",
+  "elements": [
+    { "id": "title", "type": "text", "role": "TITLE", "text": "QUIET FORMS" }
+  ]
+}

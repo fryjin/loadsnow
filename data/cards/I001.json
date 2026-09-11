@@ -1,0 +1,11 @@
+{
+  "id": "I001", "type": "image", "name": "Contained", "version": "0.1.0",
+  "status": "active", "riskLevel": "low", "rarity": "common", "weight": 1,
+  "tags": ["minimal", "contained", "image-led"],
+  "parameters": {
+    "fit": { "type": "enum", "values": ["contain"], "default": "contain" },
+    "frameScale": { "type": "float", "min": 0.7, "max": 0.9, "default": 0.8, "distribution": "uniform" }
+  },
+  "eligibility": [],
+  "rules": [{ "id": "requires-image", "when": { "field": "hasImage", "operator": "eq", "value": false }, "effect": { "type": "disable" } }]
+}

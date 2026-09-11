@@ -1,23 +1,10 @@
 {
-  "id": "T001",
-  "type": "typography",
-  "name": "Neutral Sans",
-  "version": "0.1.0",
-  "status": "active",
-  "riskLevel": "low",
-  "rarity": "common",
-  "weight": 1,
+  "id": "T001", "type": "typography", "name": "Neutral Sans", "version": "0.1.0",
+  "status": "active", "riskLevel": "low", "rarity": "common", "weight": 1,
+  "tags": ["minimal", "sans", "neutral"],
   "parameters": {
-    "fontFamily": {
-      "type": "string",
-      "default": "sans-serif"
-    },
-    "fontWeight": {
-      "type": "number",
-      "default": 400,
-      "min": 100,
-      "max": 900
-    }
+    "familyClass": { "type": "enum", "values": ["neo-grotesk", "humanist-sans"], "default": "neo-grotesk" },
+    "weight": { "type": "integer", "min": 400, "max": 600, "default": 500, "distribution": "uniform" }
   },
-  "rules": []
+  "eligibility": [], "rules": []
 }

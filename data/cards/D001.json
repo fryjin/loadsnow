@@ -1,0 +1,6 @@
+{
+  "id": "D001", "type": "detail", "name": "No Detail", "version": "0.1.0",
+  "status": "active", "riskLevel": "low", "rarity": "common", "weight": 1,
+  "tags": ["no-detail", "minimal"], "noOp": true,
+  "parameters": {}, "eligibility": [], "rules": []
+}

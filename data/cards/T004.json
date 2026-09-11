@@ -1,0 +1,10 @@
+{
+  "id": "T004", "type": "typography", "name": "Serif Editorial", "version": "0.1.0",
+  "status": "active", "riskLevel": "low", "rarity": "common", "weight": 0.9,
+  "tags": ["editorial", "serif", "classic"],
+  "parameters": {
+    "familyClass": { "type": "enum", "values": ["transitional-serif", "old-style-serif"], "default": "transitional-serif" },
+    "contrast": { "type": "enum", "values": ["moderate", "high"], "default": "moderate" }
+  },
+  "eligibility": [], "rules": []
+}

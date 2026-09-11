@@ -1,0 +1,11 @@
+{
+  "id": "P004", "type": "palette", "name": "White / Blue / Black", "version": "0.1.0",
+  "status": "active", "riskLevel": "low", "rarity": "common", "weight": 0.9,
+  "tags": ["clean", "cool", "accented"],
+  "parameters": {
+    "background": { "type": "enum", "values": ["#FFFFFF"], "default": "#FFFFFF" },
+    "foreground": { "type": "enum", "values": ["#111111"], "default": "#111111" },
+    "accent": { "type": "enum", "values": ["#1D4ED8", "#2563EB"], "default": "#1D4ED8" }
+  },
+  "eligibility": [], "rules": []
+}

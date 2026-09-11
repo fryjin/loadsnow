@@ -1,0 +1,10 @@
+{
+  "id": "W002", "type": "wild", "name": "Oversized Title", "version": "0.1.0",
+  "status": "active", "riskLevel": "high", "rarity": "rare", "weight": 0.4,
+  "tags": ["dense", "oversized-title", "type-dominant"],
+  "parameters": {
+    "titleEmphasis": { "type": "float", "min": 1.3, "max": 1.8, "default": 1.5, "distribution": "uniform" },
+    "allowWrap": { "type": "boolean", "default": true, "probability": 0.65 }
+  },
+  "eligibility": [], "rules": []
+}

@@ -1,0 +1,12 @@
+{
+  "id": "I003", "type": "image", "name": "Edge Crop", "version": "0.1.0",
+  "status": "active", "riskLevel": "medium", "rarity": "uncommon", "weight": 0.8,
+  "tags": ["dynamic", "edge", "image-led"],
+  "parameters": {
+    "fit": { "type": "enum", "values": ["cover"], "default": "cover" },
+    "edgeCrop": { "type": "boolean", "default": true, "probability": 0.8 },
+    "cropBias": { "type": "enum", "values": ["center", "top", "bottom"], "default": "center", "distribution": "weighted", "weights": [0.6, 0.25, 0.15] }
+  },
+  "eligibility": [],
+  "rules": [{ "id": "requires-image", "when": { "field": "hasImage", "operator": "eq", "value": false }, "effect": { "type": "disable" } }]
+}

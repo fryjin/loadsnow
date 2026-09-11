@@ -1,0 +1,10 @@
+{
+  "id": "L005", "type": "layout", "name": "Type Dominant", "version": "0.1.0",
+  "status": "active", "riskLevel": "medium", "rarity": "uncommon", "weight": 0.8,
+  "tags": ["dense", "type-dominant", "statement"],
+  "parameters": {
+    "alignment": { "type": "enum", "values": ["left", "center"], "default": "left", "distribution": "weighted", "weights": [0.7, 0.3] },
+    "titleEmphasis": { "type": "float", "min": 1.2, "max": 1.8, "default": 1.5, "distribution": "uniform" }
+  },
+  "eligibility": [], "rules": []
+}
