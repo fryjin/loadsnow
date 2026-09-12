@@ -1,0 +1,10 @@
+{
+  "id": "L013", "type": "layout", "name": "Poster Stack", "version": "0.1.0",
+  "status": "active", "riskLevel": "medium", "rarity": "uncommon", "weight": 0.7,
+  "tags": ["dense", "stacked", "image-led"],
+  "parameters": {
+    "alignment": { "type": "enum", "values": ["left", "center"], "default": "left" },
+    "stackDepth": { "type": "integer", "min": 2, "max": 4, "default": 3, "distribution": "uniform" }
+  },
+  "eligibility": [], "rules": []
+}

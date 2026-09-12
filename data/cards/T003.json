@@ -1,23 +1,11 @@
 {
-  "id": "T003",
-  "type": "typography",
-  "name": "Condensed Impact",
-  "version": "0.1.0",
-  "status": "active",
-  "riskLevel": "low",
-  "rarity": "common",
-  "weight": 1,
+  "id": "T003", "type": "typography", "name": "Condensed Impact", "version": "0.1.0",
+  "status": "active", "riskLevel": "medium", "rarity": "uncommon", "weight": 0.8,
+  "tags": ["dense", "condensed", "impact"],
   "parameters": {
-    "fontFamily": {
-      "type": "string",
-      "default": "Impact, sans-serif"
-    },
-    "fontWeight": {
-      "type": "number",
-      "default": 700,
-      "min": 100,
-      "max": 900
-    }
+    "familyClass": { "type": "enum", "values": ["condensed-sans"], "default": "condensed-sans" },
+    "weight": { "type": "integer", "min": 700, "max": 900, "default": 800, "distribution": "uniform" },
+    "trackingScale": { "type": "float", "min": 0.9, "max": 1, "default": 0.95, "distribution": "uniform" }
   },
-  "rules": []
+  "eligibility": [], "rules": []
 }

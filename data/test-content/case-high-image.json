@@ -1,0 +1,13 @@
+{
+  "id": "case-high-image",
+  "language": "en",
+  "elements": [
+    { "id": "title", "type": "text", "role": "TITLE", "text": "DESIGNING PUBLIC FUTURES" },
+    { "id": "subtitle", "type": "text", "role": "SUBTITLE", "text": "A citywide forum on systems, materials, and shared space" },
+    { "id": "body", "type": "text", "role": "BODY", "text": "Across three days, designers, researchers, civic leaders, and students examine how public systems can become more useful, legible, and welcoming. Talks and workshops connect practical experiments in transport, housing, climate response, digital access, and neighborhood culture with the people who use those systems every day. The program includes open studios, moderated debates, prototype reviews, and an evening exhibition." },
+    { "id": "date", "type": "text", "role": "DATE", "text": "November 6–8" },
+    { "id": "location", "type": "text", "role": "LOCATION", "text": "Civic Hall, Rotterdam" },
+    { "id": "meta", "type": "text", "role": "META", "text": "Forum 04 / Free admission with registration" },
+    { "id": "image", "type": "image", "role": "IMAGE_PRIMARY", "source": "placeholders/public-futures.jpg", "alt": "People gathering around a public design installation", "width": 1600, "height": 1067 }
+  ]
+}

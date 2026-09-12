@@ -1,25 +1,11 @@
 {
-  "id": "P003",
-  "type": "palette",
-  "name": "Cream / Red / Black",
-  "version": "0.1.0",
-  "status": "active",
-  "riskLevel": "low",
-  "rarity": "common",
-  "weight": 1,
+  "id": "P003", "type": "palette", "name": "Cream / Red / Black", "version": "0.1.0",
+  "status": "active", "riskLevel": "medium", "rarity": "common", "weight": 0.9,
+  "tags": ["editorial", "warm", "accented"],
   "parameters": {
-    "background": {
-      "type": "string",
-      "default": "#F5EBDD"
-    },
-    "foreground": {
-      "type": "string",
-      "default": "#171717"
-    },
-    "accent": {
-      "type": "string",
-      "default": "#D52B2B"
-    }
+    "background": { "type": "enum", "values": ["#F5EBDD"], "default": "#F5EBDD" },
+    "foreground": { "type": "enum", "values": ["#171717"], "default": "#171717" },
+    "accent": { "type": "enum", "values": ["#D52B2B", "#B91C1C"], "default": "#D52B2B" }
   },
-  "rules": []
+  "eligibility": [], "rules": []
 }

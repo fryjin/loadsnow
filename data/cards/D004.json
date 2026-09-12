@@ -1,0 +1,10 @@
+{
+  "id": "D004", "type": "detail", "name": "Guide Line", "version": "0.1.0",
+  "status": "active", "riskLevel": "low", "rarity": "uncommon", "weight": 0.65,
+  "tags": ["guide-line", "editorial", "structured"],
+  "parameters": {
+    "showGuide": { "type": "boolean", "default": true, "probability": 0.75 },
+    "emphasis": { "type": "enum", "values": ["subtle", "medium"], "default": "subtle", "distribution": "weighted", "weights": [0.8, 0.2] }
+  },
+  "eligibility": [], "rules": []
+}

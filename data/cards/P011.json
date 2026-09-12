@@ -1,0 +1,11 @@
+{
+  "id": "P011", "type": "palette", "name": "Neutral + Accent", "version": "0.1.0",
+  "status": "active", "riskLevel": "medium", "rarity": "uncommon", "weight": 0.7,
+  "tags": ["neutral", "accented", "flexible"],
+  "parameters": {
+    "background": { "type": "enum", "values": ["#F3F1EC", "#E7E5E4", "#FAFAF9"], "default": "#F3F1EC" },
+    "foreground": { "type": "enum", "values": ["#1C1917"], "default": "#1C1917" },
+    "accent": { "type": "enum", "values": ["#EA580C", "#0F766E", "#7C3AED"], "default": "#EA580C", "distribution": "weighted", "weights": [0.4, 0.35, 0.25] }
+  },
+  "eligibility": [], "rules": []
+}

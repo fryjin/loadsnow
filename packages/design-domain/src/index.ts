@@ -5,9 +5,10 @@ export type ContentRole = (typeof CONTENT_ROLES)[number];
 export type ContentType = 'text' | 'image';
 export type ContentElement =
   | { readonly id: string; readonly role: ContentRole; readonly type: 'text'; readonly text: string }
-  | { readonly id: string; readonly role: ContentRole; readonly type: 'image'; readonly source: string; readonly alt: string };
+  | { readonly id: string; readonly role: ContentRole; readonly type: 'image'; readonly source: string; readonly alt: string; readonly width: number; readonly height: number };
 export interface ContentDocument {
   readonly id: string;
+  readonly language?: string;
   readonly elements: readonly ContentElement[];
 }
 export type Content = ContentDocument;
@@ -61,9 +62,11 @@ export interface CardRule {
 }
 export type CardEligibility = readonly CardRule[];
 export type CardParameter =
-  | { readonly type: 'number'; readonly default: number; readonly min?: number; readonly max?: number }
-  | { readonly type: 'string'; readonly default: string }
-  | { readonly type: 'boolean'; readonly default: boolean };
+  | { readonly type: 'integer' | 'float'; readonly min: number; readonly max: number; readonly default: number; readonly distribution?: 'uniform' }
+  | { readonly type: 'boolean'; readonly default: boolean; readonly probability?: number }
+  | { readonly type: 'enum'; readonly values: readonly ParameterScalar[]; readonly default: ParameterScalar; readonly distribution?: 'uniform'; readonly weights?: never }
+  | { readonly type: 'enum'; readonly values: readonly ParameterScalar[]; readonly default: ParameterScalar; readonly distribution: 'weighted'; readonly weights: readonly number[] };
+export type ParameterScalar = string | number | boolean;
 export interface CardVariant {
   readonly id: string;
   readonly name: string;
@@ -78,6 +81,9 @@ export interface CardDefinition {
   readonly riskLevel: CardRiskLevel;
   readonly rarity: CardRarity;
   readonly weight: number;
+  readonly tags: readonly string[];
+  /** Explicit no-detail selection, normalized to an empty DNA details array. */
+  readonly noOp?: boolean;
   readonly parameters: Readonly<Record<string, CardParameter>>;
   readonly eligibility?: CardEligibility;
   readonly rules: readonly CardRule[];
@@ -97,27 +103,4 @@ export interface RuleEvaluation {
   readonly matchedRuleIds: readonly string[];
 }
 
-// Reserved contracts only; DEV-001 does not perform generation.
-export interface GenerationRequest {
-  readonly seed: string | number;
-  readonly content: Content;
-  readonly canvas: CanvasSpec;
-  readonly packIds: readonly string[];
-}
-export interface GenerationContext {
-  readonly request: GenerationRequest;
-  readonly contentContext: RuleContext;
-}
-export interface DesignDNA {
-  readonly version: string;
-  readonly seed: string | number;
-  readonly cards: Readonly<Partial<Record<CardType, string>>>;
-}
-export interface ResolvedDNA {
-  readonly dna: DesignDNA;
-  readonly parameters: Readonly<Partial<Record<CardType, Readonly<Record<string, RuleValue>>>>>;
-}
-export interface GenerationResult {
-  readonly dna: DesignDNA | null;
-  readonly diagnostics: readonly Diagnostic[];
-}
+export * from './generation';

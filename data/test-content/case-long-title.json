@@ -1,0 +1,9 @@
+{
+  "id": "case-long-title",
+  "language": "en",
+  "elements": [
+    { "id": "title", "type": "text", "role": "TITLE", "text": "THE SHAPES WE SHARE AND THE PLACES WE KEEP RETURNING TO THROUGH EVERY SEASON" },
+    { "id": "subtitle", "type": "text", "role": "SUBTITLE", "text": "An exhibition about memory, repetition, and place" },
+    { "id": "date", "type": "text", "role": "DATE", "text": "January 18–March 2" }
+  ]
+}

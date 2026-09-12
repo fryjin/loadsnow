@@ -52,13 +52,13 @@ describe('Core architecture gates', () => {
             }
           }
         }
-        if (ts.isIdentifier(node) && ['window', 'document', 'localStorage', 'sessionStorage', 'navigator', 'indexedDB', 'globalThis', 'process', 'Buffer', 'require', 'React'].includes(node.text)) {
+        if (ts.isIdentifier(node) && ['window', 'document', 'localStorage', 'sessionStorage', 'navigator', 'indexedDB', 'globalThis', 'process', 'Buffer', 'require', 'React', 'fetch', 'File', 'Date', 'crypto'].includes(node.text)) {
           problems.push(relative(root, file) + ': platform identifier ' + node.text);
         }
         if (ts.isCallExpression(node) && node.expression.kind === ts.SyntaxKind.ImportKeyword) {
           problems.push(relative(root, file) + ': dynamic import must be reviewed');
         }
-        if (ts.isStringLiteral(node) && /^[LTP]\d{3}$/.test(node.text)) {
+        if (ts.isStringLiteral(node) && /^[LICDTPW]\d{3}$/.test(node.text)) {
           problems.push(relative(root, file) + ': hardcoded prototype card id');
         }
         ts.forEachChild(node, visit);

@@ -1,0 +1,11 @@
+{
+  "id": "case-cjk",
+  "language": "ja",
+  "elements": [
+    { "id": "title", "type": "text", "role": "TITLE", "text": "未来のかたちをデザインする展覧会" },
+    { "id": "subtitle", "type": "text", "role": "SUBTITLE", "text": "都市と暮らしの新しい関係" },
+    { "id": "body", "type": "text", "role": "BODY", "text": "デザイン、建築、テクノロジーの実践を通して、これからの公共空間と日常生活を考えます。国内外の作家による展示、対話、ワークショップを開催します。" },
+    { "id": "date", "type": "text", "role": "DATE", "text": "10月12日–18日" },
+    { "id": "location", "type": "text", "role": "LOCATION", "text": "東京都現代美術館" }
+  ]
+}

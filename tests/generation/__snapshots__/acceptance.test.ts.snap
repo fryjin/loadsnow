@@ -1,0 +1,133 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`M1 real-pack acceptance gates > freezes numeric and string module seed/select vectors for replay 1`] = `
+{
+  "seeds": {
+    "composition": 3790999780,
+    "detail": 2732666026,
+    "global": 839217,
+    "image": 360060066,
+    "layout": 1802451179,
+    "palette": 1453218943,
+    "typography": 2943031360,
+    "wild": 4288514591,
+  },
+  "select": {
+    "composition": 0.2960881805047393,
+    "detail": 0.10983392014168203,
+    "image": 0.7307552380952984,
+    "layout": 0.6343223785515875,
+    "palette": 0.5281083709560335,
+    "typography": 0.28629931481555104,
+    "wild": 0.6042011324316263,
+  },
+}
+`;
+
+exports[`M1 real-pack acceptance gates > freezes numeric and string module seed/select vectors for replay 2`] = `
+{
+  "seeds": {
+    "composition": 4252940561,
+    "detail": 226677519,
+    "global": "839217",
+    "image": 1039384264,
+    "layout": 675103042,
+    "palette": 2383627380,
+    "typography": 3446605024,
+    "wild": 506632396,
+  },
+  "select": {
+    "composition": 0.32692474173381925,
+    "detail": 0.0693518475163728,
+    "image": 0.3872218856122345,
+    "layout": 0.22341633634641767,
+    "palette": 0.42202498158439994,
+    "typography": 0.9858122949954122,
+    "wild": 0.16728344140574336,
+  },
+}
+`;
+
+exports[`M1 real-pack acceptance gates > repeats the entire 27-card result 100 times and freezes the acceptance DNA 1`] = `
+{
+  "cardPackVersion": "0.1.0",
+  "cardPacks": [
+    {
+      "id": "poster-core-prototype",
+      "version": "0.1.0",
+    },
+  ],
+  "cards": {
+    "composition": {
+      "id": "C001",
+      "version": "0.1.0",
+    },
+    "details": [
+      {
+        "id": "D002",
+        "version": "0.1.0",
+      },
+    ],
+    "image": {
+      "id": "I003",
+      "version": "0.1.0",
+    },
+    "layout": {
+      "id": "L002",
+      "version": "0.1.0",
+    },
+    "palette": {
+      "id": "P002",
+      "version": "0.1.0",
+    },
+    "typography": {
+      "id": "T006",
+      "version": "0.1.0",
+    },
+    "wild": null,
+  },
+  "engineVersion": "0.1.0",
+  "parameters": {
+    "composition": {
+      "emphasisBalance": 0.9625402954407036,
+      "spacingRhythm": "varied",
+    },
+    "details": [
+      {
+        "digitCount": 2,
+        "showIndex": true,
+      },
+    ],
+    "image": {
+      "cropBias": "top",
+      "edgeCrop": true,
+      "fit": "cover",
+    },
+    "layout": {
+      "alignment": "center",
+      "columns": 1,
+    },
+    "palette": {
+      "background": "#F5EBDD",
+      "foreground": "#111111",
+    },
+    "typography": {
+      "bodyFamilyClass": "sans",
+      "invertPairing": false,
+      "titleFamilyClass": "serif",
+    },
+    "wild": null,
+  },
+  "seeds": {
+    "composition": 4252940561,
+    "detail": 226677519,
+    "global": "839217",
+    "image": 1039384264,
+    "layout": 675103042,
+    "palette": 2383627380,
+    "typography": 3446605024,
+    "wild": 506632396,
+  },
+  "version": "1.0.0",
+}
+`;

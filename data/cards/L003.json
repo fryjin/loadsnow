@@ -1,36 +1,16 @@
 {
-  "id": "L003",
-  "type": "layout",
-  "name": "Split Editorial",
-  "version": "0.1.0",
-  "status": "active",
-  "riskLevel": "low",
-  "rarity": "common",
-  "weight": 1,
+  "id": "L003", "type": "layout", "name": "Split Editorial", "version": "0.1.0",
+  "status": "active", "riskLevel": "medium", "rarity": "common", "weight": 1,
+  "tags": ["editorial", "image-led", "split"],
   "parameters": {
-    "alignment": {
-      "type": "string",
-      "default": "left"
-    },
-    "columns": {
-      "type": "number",
-      "default": 2,
-      "min": 2,
-      "max": 2
-    }
+    "alignment": { "type": "enum", "values": ["left", "right"], "default": "left" },
+    "columns": { "type": "integer", "min": 2, "max": 2, "default": 2 },
+    "splitRatio": { "type": "enum", "values": [0.4, 0.45, 0.5, 0.55, 0.6], "default": 0.5, "distribution": "weighted", "weights": [0.1, 0.2, 0.4, 0.2, 0.1] }
   },
-  "rules": [],
-  "eligibility": [
-    {
-      "id": "requires-image",
-      "when": {
-        "field": "hasImage",
-        "operator": "eq",
-        "value": false
-      },
-      "effect": {
-        "type": "disable"
-      }
-    }
-  ]
+  "eligibility": [{
+    "id": "requires-image",
+    "when": { "field": "hasImage", "operator": "eq", "value": false },
+    "effect": { "type": "disable" }
+  }],
+  "rules": []
 }

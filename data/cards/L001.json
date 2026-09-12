@@ -1,23 +1,11 @@
 {
-  "id": "L001",
-  "type": "layout",
-  "name": "Classic Left Editorial",
-  "version": "0.1.0",
-  "status": "active",
-  "riskLevel": "low",
-  "rarity": "common",
-  "weight": 1,
+  "id": "L001", "type": "layout", "name": "Classic Left Editorial", "version": "0.1.0",
+  "status": "active", "riskLevel": "low", "rarity": "common", "weight": 1,
+  "tags": ["editorial", "minimal", "left-aligned"],
   "parameters": {
-    "alignment": {
-      "type": "string",
-      "default": "left"
-    },
-    "columns": {
-      "type": "number",
-      "default": 1,
-      "min": 1,
-      "max": 1
-    }
+    "alignment": { "type": "enum", "values": ["left"], "default": "left" },
+    "columns": { "type": "integer", "min": 1, "max": 2, "default": 1, "distribution": "uniform" },
+    "spacingScale": { "type": "float", "min": 0.9, "max": 1.1, "default": 1, "distribution": "uniform" }
   },
-  "rules": []
+  "eligibility": [], "rules": []
 }

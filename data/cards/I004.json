@@ -1,0 +1,11 @@
+{
+  "id": "I004", "type": "image", "name": "Half Frame", "version": "0.1.0",
+  "status": "active", "riskLevel": "low", "rarity": "common", "weight": 0.9,
+  "tags": ["split", "balanced", "image-led"],
+  "parameters": {
+    "imageShare": { "type": "float", "min": 0.45, "max": 0.55, "default": 0.5, "distribution": "uniform" },
+    "side": { "type": "enum", "values": ["left", "right"], "default": "right" }
+  },
+  "eligibility": [],
+  "rules": [{ "id": "requires-image", "when": { "field": "hasImage", "operator": "eq", "value": false }, "effect": { "type": "disable" } }]
+}

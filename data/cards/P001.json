@@ -1,21 +1,10 @@
 {
-  "id": "P001",
-  "type": "palette",
-  "name": "Black / White",
-  "version": "0.1.0",
-  "status": "active",
-  "riskLevel": "low",
-  "rarity": "common",
-  "weight": 1,
+  "id": "P001", "type": "palette", "name": "Black / White", "version": "0.1.0",
+  "status": "active", "riskLevel": "low", "rarity": "common", "weight": 1,
+  "tags": ["minimal", "monochrome", "high-contrast"],
   "parameters": {
-    "background": {
-      "type": "string",
-      "default": "#FFFFFF"
-    },
-    "foreground": {
-      "type": "string",
-      "default": "#000000"
-    }
+    "background": { "type": "enum", "values": ["#FFFFFF"], "default": "#FFFFFF" },
+    "foreground": { "type": "enum", "values": ["#000000"], "default": "#000000" }
   },
-  "rules": []
+  "eligibility": [], "rules": []
 }

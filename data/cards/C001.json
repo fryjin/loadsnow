@@ -1,0 +1,10 @@
+{
+  "id": "C001", "type": "composition", "name": "Balanced", "version": "0.1.0",
+  "status": "active", "riskLevel": "low", "rarity": "common", "weight": 1,
+  "tags": ["minimal", "balanced", "calm"],
+  "parameters": {
+    "emphasisBalance": { "type": "float", "min": 0.9, "max": 1.1, "default": 1, "distribution": "uniform" },
+    "spacingRhythm": { "type": "enum", "values": ["even", "varied"], "default": "even" }
+  },
+  "eligibility": [], "rules": []
+}

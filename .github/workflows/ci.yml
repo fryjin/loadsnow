@@ -1,8 +1,8 @@
-name: M0 Foundation CI
+name: Design Engine CI
 
 on:
   push:
-    branches: [main, feature/m0-foundation]
+    branches: [main, feature/m0-foundation, feature/m1-dna-generator]
   pull_request:
     branches: [main]
 

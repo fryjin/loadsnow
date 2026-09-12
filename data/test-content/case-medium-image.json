@@ -1,0 +1,12 @@
+{
+  "id": "case-medium-image",
+  "language": "en",
+  "elements": [
+    { "id": "title", "type": "text", "role": "TITLE", "text": "NEW FORMS" },
+    { "id": "subtitle", "type": "text", "role": "SUBTITLE", "text": "Contemporary Design Exhibition" },
+    { "id": "body", "type": "text", "role": "BODY", "text": "Short body copy" },
+    { "id": "date", "type": "text", "role": "DATE", "text": "October 12–18" },
+    { "id": "location", "type": "text", "role": "LOCATION", "text": "Seoul" },
+    { "id": "portrait", "type": "image", "role": "IMAGE_PRIMARY", "source": "placeholders/portrait.jpg", "alt": "Portrait study for the exhibition", "width": 800, "height": 1200 }
+  ]
+}

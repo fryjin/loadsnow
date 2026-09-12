@@ -1,0 +1,10 @@
+{
+  "id": "P002", "type": "palette", "name": "Black / Cream", "version": "0.1.0",
+  "status": "active", "riskLevel": "low", "rarity": "common", "weight": 0.9,
+  "tags": ["minimal", "warm", "editorial"],
+  "parameters": {
+    "background": { "type": "enum", "values": ["#F5EBDD"], "default": "#F5EBDD" },
+    "foreground": { "type": "enum", "values": ["#111111"], "default": "#111111" }
+  },
+  "eligibility": [], "rules": []
+}

@@ -1,0 +1,10 @@
+{
+  "id": "T009", "type": "typography", "name": "Compact Editorial", "version": "0.1.0",
+  "status": "active", "riskLevel": "medium", "rarity": "uncommon", "weight": 0.7,
+  "tags": ["dense", "editorial", "compact"],
+  "parameters": {
+    "widthClass": { "type": "enum", "values": ["compact", "condensed"], "default": "compact", "distribution": "weighted", "weights": [0.7, 0.3] },
+    "lineSpacingScale": { "type": "float", "min": 0.85, "max": 1, "default": 0.92, "distribution": "uniform" }
+  },
+  "eligibility": [], "rules": []
+}
