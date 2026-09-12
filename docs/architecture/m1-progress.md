@@ -15,4 +15,9 @@
 - Browser: repeated DRAW and reload identical; force success/no-image failure verified;
   clear force recovers image=null; 27 cards and no warning/error console logs.
 - Data-review fixture validation follow-up closed by acceptance.test.ts.
-- Final review and PR/CI pending.
+- Final whole-branch review: 51ae15c..275d029 compliant; no findings.
+- NEXT SEED browser check passed: 839218 produces another valid combination.
+- PR #2 created: https://github.com/fryjin/loadsnow/pull/2.
+- Remote push CI passed for 275d029: run 34637978215.
+- M1 implementation complete; final documentation update followed by latest-head CI
+  confirmation. Stop before M2; leave PR open for M1 Architecture Review.

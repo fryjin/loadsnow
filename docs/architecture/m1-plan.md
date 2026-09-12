@@ -37,27 +37,27 @@ Only blind/new_direction is implemented; reject other modes/policies explicitly.
 
 ## Tasks
 
-- [ ] 1. Formalize contracts and parameter/library validation.
+- [x] 1. Formalize contracts and parameter/library validation.
   Files: packages/design-domain/src/{index,generation}.ts,
   packages/card-library/src/{index,parameters,library}.ts; tests/generation/schema.test.ts.
   Check invalid weights, types, overrides; CardRef/cardinality/result type checks.
-- [ ] 2. Seed data task (independent delegate, task brief in m1-data-task.md):
+- [x] 2. Seed data task (independent delegate, task brief in m1-data-task.md):
   27 cards, pack/compatibility data and five ContentDocument cases. Tests data schema
   and exact counts/IDs. Review task diff before integration.
-- [ ] 3. Profile, compatibility, pool and parameter resolution.
+- [x] 3. Profile, compatibility, pool and parameter resolution.
   Files: packages/design-generation/src/{profile,compatibility,pool,parameters,seeds}.ts;
   tests/generation/{profile,pool,parameters}.test.ts. Write failing behavior tests
   first, implement, verify focused tests.
-- [ ] 4. Generate validation + conditional sampler + API.
+- [x] 4. Generate validation + conditional sampler + API.
   Files: packages/design-generation/src/{request,sample,generate,index}.ts;
   tests/generation/{contracts,generation}.test.ts.
   Check 100 identical full DNAs, 100 no-image seeds, downstream weight effects,
   0 weight/forbidden exclusion, force/lock precedence and errors, module isolation.
-- [ ] 5. DNA Lab with case/seed/image/density/force controls, DRAW, versioned
+- [x] 5. DNA Lab with case/seed/image/density/force controls, DRAW, versioned
   cards, params, seeds, final weights/compatibility/diagnostics. No Poster.
   Files: apps/engine-lab/src/*, tests/engine-lab.test.ts, package manifest.
   Browser: same seed reload, forced split with/without image, 27 valid cards.
-- [ ] 6. Architecture guards, docs, independent final review, CI and PR.
+- [x] 6. Architecture guards, docs, independent final review, CI and PR.
   Files: tests/architecture.test.ts, README.md, .github/workflows/ci.yml,
   docs/architecture/{m1-dna-generator,m1-acceptance}.md.
   pnpm typecheck, pnpm test, pnpm build; all gates A-J. Stop for M1 review.

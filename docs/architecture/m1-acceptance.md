@@ -47,6 +47,8 @@ This is a legal sampled combination; the brief's example combination was illustr
 
 - DRAW twice: complete displayed DNA text identical.
 - Reload with the same default content/seed: complete DNA text identical.
+- NEXT SEED changes the string to `"839218"`; DRAW produces another valid DNA
+  (L002 / C001 / T001 / I004 / P001 / [D002] / null).
 - Force L003 / T001 / P003 with an image: all three references match.
 - Remove image with L003 forced: `FORCED_CARD_INELIGIBLE`, displayed DNA null.
 - Clear Layout force with no image: L001 selected and image/parameters null.
@@ -62,7 +64,11 @@ This is a legal sampled combination; the brief's example combination was illustr
 - `pnpm build`: passed; includes typecheck, then Vite production build (68 modules).
 - Data task independent review: spec compliant, quality approved. Its minor fixture
   validation gap was closed in acceptance.test.ts for all five ContentDocuments.
-- Whole-branch review and remote CI are recorded after the final review/push.
+- Independent whole-branch review of `51ae15c..275d029`: compliant with DEV-002,
+  ready to merge subject to CI; no critical, important or minor findings.
+- Remote push CI for `275d029`: [passed](https://github.com/fryjin/loadsnow/actions/runs/34637978215).
+- Delivery PR: [#2](https://github.com/fryjin/loadsnow/pull/2), targeting main.
+  The PR checks tab records CI for its latest head, including documentation updates.
 
 ## Known limits
 
